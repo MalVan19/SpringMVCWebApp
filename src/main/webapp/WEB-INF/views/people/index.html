@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Все люди</title>
+    <link th:href="@{/res/style.css}" rel = "stylesheet"/>
 </head>
 <body>
-<div th:each="person : ${people}">
+<div class="in" th:each="person : ${people}">
 <a th:href="@{/people/{id}(id=${person.getId()})}"
    th:text="${person.getName() + ', ' + person.getAge()}">user</a>
 </div>
